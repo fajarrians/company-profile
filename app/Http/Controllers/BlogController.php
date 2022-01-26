@@ -67,7 +67,10 @@ class BlogController extends Controller
      */
     public function show(blog $blog)
     {
-        //
+        $blog = Blog::get()->where('slug', $blog->slug);
+        return view('detail_blog', [
+            'blog' => $blog
+        ]);
     }
 
     /**

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Hydro - Blog Page</title>
+     <title>Hydro - Landing Page Template</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -49,11 +49,12 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="index.html#home" class="smoothScroll">Home</a></li>
-                         <li><a href="index.html#about" class="smoothScroll">About</a></li>
-                         <li><a href="index.html#blog" class="smoothScroll">Blog</a></li>
-                         <li><a href="index.html#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="index.html#contact" class="smoothScroll">Contacts</a></li>
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About</a></li>
+                         <li><a href="/allblog" class="smoothScroll">Blog</a></li>
+                         <li><a href="/allportfolio" class="smoothScroll">Portfolio</a></li>
+                         <li><a href="/allgallery" class="smoothScroll">Gallery</a></li>
+                         <li><a href="#contact" class="smoothScroll">Contacts</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -67,75 +68,27 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </section>
 
-
-     <!-- BLOG HEADER -->
-     <section id="blog-header" data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-offset-1 col-md-5 col-sm-12">
-                      @forelse ($blog as $item)
-                          
-                      @empty
-                          
-                      @endforelse
-                         <h2>{{ $item->title }}</h2>
-                    </div>
-                    
-               </div>
-          </div>
-     </section>
-
-
-     <!-- BLOG DETAIL -->
-     <section id="blog-detail" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-offset-1 col-md-10 col-sm-12">
-                         <!-- BLOG THUMB -->
-                         <div class="blog-detail-thumb">
-                           @forelse ($blog as $item)
-                               <div class="blog-image">
-                                   <img src="{{ asset('storage/' . $item->image) }}" class="img-responsive" alt="Blog Image">
-                              </div>
-                              <h2>{{ $item->title }}</h2>
-                              <p>{!! $item->content !!}</p>
-                              <div class="blog-social-share">
-                                   <h4>Share this article</h4>
-                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
-                                   <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
-                                   <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
-                              </div>
-                           @empty
-                               
-                           @endforelse
-                              
-                         </div>
-                    </div>
-                    
-               </div>
-          </div>
-     </section>
-
+     <div>
+         @yield('content')
+     </div>
 
      <!-- FOOTER -->
      <footer data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                         <div class="footer-bottom">
-                            <div class="copyright-text"> 
-                              <br>
-                                <p>Copyright &copy; 2017 Your Company</p>
-                            </div>
-                         </div>
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
+        <div class="container">
+             <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                       <div class="footer-bottom">
+                          <div class="copyright-text"> 
+                            <br>
+                              <p>Copyright &copy; 2017 Your Company</p>
+                          </div>
+                       </div>
+                  </div>
+                  
+             </div>
+        </div>
+   </footer>
+
 
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

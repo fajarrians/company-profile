@@ -1,386 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.main')
+@section('content')
+    <!-- HOME -->
+  <section id="home" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+           <div class="row">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Baker Bootstrap Theme</title>
-  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+                <div class="col-md-6 col-sm-12">
+                     <div class="home-info">
+                       @forelse ($home as $item)
+                           <h1>{{ $item->title }}</h1>
+                           <div class="body">{{ $item->body }}</div>
+                       @empty
+                           
+                       @endforelse
+                          
+                          <a href="#about" class="btn section-btn smoothScroll">Start a project</a>
+                          <span>
+                               CALL US (+66) 010-020-0340
+                               <small>For any inquiry</small>
+                          </span>
+                     </div>
+                </div>
+           </div>
+      </div>
+ </section>
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
-  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- =======================================================
-    Theme Name: Baker
-    Theme URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
-</head>
 
-<body>
-
-  <div class="loader"></div>
-  <div id="myDiv">
-    <!--HEADER-->
-    <div class="header">
-      <div class="bg-color">
-        <header id="main-header">
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                <a class="navbar-brand" href="#">Ba<span class="logo-dec">ker</span></a>
-              </div>
-              <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="#main-header">Home</a></li>
-                  <li class=""><a href="#feature">About</a></li>
-                  <li class=""><a href="#service">Services</a></li>
-                  <li class=""><a href="#portfolio">Portfolio</a></li>
-                  <li class=""><a href="#blog">Blog</a></li>
-                  <li class=""><a href="#contact">Contact Us</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </header>
-        <div class="wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="banner-info text-center wow fadeIn delay-05s">
-                <h1 class="bnr-title">We are at ba<span>ker</span></h1>
-                <h2 class="bnr-sub-title">Starting a new journey!!</h2>
-                <p class="bnr-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip <br>ex ea commodo consequat.</p>
-                <div class="brn-btn">
-                  <a href="#" class="btn btn-download">Download now!</a>
-                  <a href="#" class="btn btn-more">Learn More</a>
-                </div>
-                <div class="overlay-detail">
-                  <a href="#feature"><i class="fa fa-angle-down"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ HEADER-->
-    <!---->
-    <section id="feature" class="section-padding wow fadeIn delay-05s">
+ <!-- ABOUT -->
+ <section id="about" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/ser01.png">
-              </div>
-              <h3 class="pad-bt15">Creative Concept</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/ser02.png">
-              </div>
-              <h3 class="pad-bt15">Amazing Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/ser03.png">
-              </div>
-              <h3 class="pad-bt15">Cost effective</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-              <div class="item-img">
-                <img src="img/ser04.png">
-              </div>
-              <h3 class="pad-bt15">Secure</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---->
-    <!---->
-    <section id="service" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2 class="service-title pad-bt15">What We Do?</h2>
-            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <h3><span>D</span>esign And Developement</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="">learn more...</a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <h3><span>W</span>ebsite Maintenance</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="">learn more...</a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <h3><span>S</span>eo Optimization</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="">learn more...</a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="service-item">
-              <h3><span>D</span>igital Marketing</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="">Learn more...</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2 class="service-title pad-bt15">Our Recent Works</h2>
-            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port01.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port02.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port03.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port04.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port05.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item padding-right-zero mr-btn-15">
-            <figure>
-              <img src="img/port06.jpg" class="img-responsive">
-              <figcaption>
-                <h2>Project For Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---->
-    
-    <!---->
-    <section id="blog" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h2 class="service-title pad-bt15">Latest from our blog</h2>
-            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
-            <hr class="bottom-line">
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="blog-sec">
-              <div class="blog-img">
-                <a href="">
-                  <img src="img/blog01.jpg" class="img-responsive">
-                </a>
-              </div>
-              <div class="blog-info">
-                <h2>This is Lorem ipsum heading.</h2>
-                <div class="blog-comment">
-                  <p>Posted In: <span>Legal Advice</span></p>
-                  <p>
-                    <span><a href="#"><i class="fa fa-comments"></i></a> 15</span>
-                    <span><a href="#"><i class="fa fa-eye"></i></a> 11</span></p>
-                </div>
-                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
-                <a href="" class="read-more">Read more →</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="blog-sec">
-              <div class="blog-img">
-                <a href="">
-                  <img src="img/blog02.jpg" class="img-responsive">
-                </a>
-              </div>
-              <div class="blog-info">
-                <h2>This is Lorem ipsum heading.</h2>
-                <div class="blog-comment">
-                  <p>Posted In: <span>Legal Advice</span></p>
-                  <p>
-                    <span><a href="#"><i class="fa fa-comments"></i></a> 15</span>
-                    <span><a href="#"><i class="fa fa-eye"></i></a> 11</span></p>
-                </div>
-                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
-                <a href="" class="read-more">Read more →</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="blog-sec">
-              <div class="blog-img">
-                <a href="">
-                  <img src="img/blog03.jpg" class="img-responsive">
-                </a>
-              </div>
-              <div class="blog-info">
-                <h2>This is Lorem ipsum heading.</h2>
-                <div class="blog-comment">
-                  <p>Posted In: <span>Legal Advice</span></p>
-                  <p>
-                    <span><a href="#"><i class="fa fa-comments"></i></a> 15</span>
-                    <span><a href="#"><i class="fa fa-eye"></i></a> 11</span></p>
-                </div>
-                <p>We cannot expect people to have respect for laws and orders until we teach respect to those we have entrusted to enforce those laws all the time. we always want to help people cordially.</p>
-                <a href="" class="read-more">Read more →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---->
-    <section id="contact" class="section-padding wow fadeInUp delay-05s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center white">
-            <h2 class="service-title pad-bt15">Keep in touch with us</h2>
-            <p class="sub-title pad-bt15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore magna aliqua.</p>
-            <hr class="bottom-line white-bg">
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="loction-info white">
-              <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>A99 Adam Street<br>Texas, TX 555072</p>
-              <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@baker.com</p>
-              <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+41 5787 2323</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="contact-form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="col-md-6 padding-right-zero">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
+           <div class="row">
+              <div class="about-info">
+                @forelse ($profil as $item)
+                    <div class="section-title">
+                        <h2>Sejarah</h2>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-submit">SEND NOW</button>
-                </div>
-              </form>
-
-            </div>
-          </div>
-        </div>
+                  <p>{{ $item->profil }}</p>
+                @empty
+                    
+                @endforelse
+                @forelse ($profil as $item)
+                    <h2 class="text-center" >Visi & Misi</h2>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="service-item">
+                        <h3 class="text-center">Visi</h3>
+                        <p>{{ $item->visi }}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="service-item">
+                        <h3 class="text-center">Misi</h3>
+                        <p>{{ $item->misi }}</p>
+                      </div>
+                    </div>
+                @empty
+                    
+                @endforelse
+                  
+                  
+              </div>
+           </div>
       </div>
-    </section>
-    <!---->
-    <!---->
-    <footer id="footer">
+ </section>
+
+
+ <!-- BLOG -->
+ <section id="blog" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row text-center">
-          <p>&copy; Baker Theme. All Rights Reserved.</p>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Baker
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!---->
-  </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/wow.js"></script>
-  <script src="js/jquery.bxslider.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+           <div class="row">
 
-</body>
-</html>
+                <div class="col-md-12 col-sm-12">
+                     <div class="section-title">
+                          <h2>Blog</h2>
+                          <span class="line-bar">...</span>
+                     </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                     <!-- BLOG THUMB -->
+                     @forelse ($blog as $item)
+                         <div class="media blog-thumb">
+                                <div class="media-object media-left">
+                                    <a href="/blog/{{ $item->slug }}"><img src="{{ asset('storage/'. $item->image) }}" class="img-responsive" alt=""></a>
+                                </div>
+                                <div class="media-body blog-info">
+                                    <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
+                                    <h3><a href="/blog/{{ $item->slug }}">{{ $item->title }}</a></h3>
+                                    <p>Posted In: <span>{{ $item->author }}</p>
+                                    <a href="/blog/{{ $item->slug }}" class="btn section-btn">Read article</a>
+                                </div>
+                          </div>
+                     @empty
+                         
+                     @endforelse
+                     
+                </div>                
+           </div>
+      </div>
+ </section>
+
+
+ <!-- WORK -->
+ <section id="work" data-stellar-background-ratio="0.5">
+      <div class="container">
+           <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                     <div class="section-title">
+                          <h2>Portfolio</h2>
+                          <span class="line-bar">...</span>
+                     </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                     <!-- WORK THUMB -->
+                     <div class="work-thumb">
+                          @forelse ($portfolio as $item)
+                              <a href="{{ asset('storage/' . $item->image) }}" class="image-popup">
+                               <img src="{{ asset('storage/' . $item->image) }}" class="img-responsive" alt="Work">
+
+                               <div class="work-info">
+                                    <h3>{{ $item->title }}</h3>
+                                    <small>{{ $item->keterangan }}</small>
+                               </div>
+                              </a>
+                          @empty
+                              
+                          @endforelse    
+                     </div>
+                </div>
+           </div>
+      </div>
+ </section>
+<!-- BLOG -->
+<section id="gallery" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                         <h2>
+                              Gallery</h2>
+                         <span class="line-bar">...</span>
+                    </div>
+               </div>
+
+               <div class="col-md-3 col-sm-6">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                         @forelse ($gallery as $item)
+                             <a href="{{ asset('storage/' . $item->image) }}" >
+                              <img src="{{ asset('storage/' . $item->image) }}" class="img-responsive" alt="Work">
+
+                              <div class="work-info">
+                                   <h3>{{ $item->title }}</h3>
+                              </div>
+                             </a>
+                         @empty
+                             
+                         @endforelse    
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
+ <!-- CONTACT -->
+ <section id="contact" data-stellar-background-ratio="0.5">
+      <div class="container">
+           <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                     <div class="section-title">
+                          <h2>Contact us</h2>
+                          <span class="line-bar">...</span>
+                     </div>
+                </div>
+
+                <div class="col-md-8 col-sm-8">
+                    
+                     <!-- CONTACT FORM HERE -->
+                     <form id="contact-form" role="form" action="#" method="post">
+                          <div class="col-md-6 col-sm-6">
+                               <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
+                          </div>
+
+                          <div class="col-md-6 col-sm-6">
+                               <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
+                          </div>
+
+                          <div class="col-md-6 col-sm-6">
+                               <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
+                          </div>
+
+                          <div class="col-md-6 col-sm-6">
+                               <select class="form-control" id="cf-budgets" name="cf-budgets">
+                                    <option>Budget Level</option>
+                                    <option>$500 to $1,000</option>
+                                    <option>$1,000 to $2,200</option>
+                                    <option>$2,200 to $4,500</option>
+                                    <option>$4,500 to $7,500</option>
+                                    <option>$7,500 to $12,000</option>
+                                    <option>$12,000 or more</option>
+                               </select>
+                          </div>
+
+                          <div class="col-md-12 col-sm-12">
+                               <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
+                          </div>
+
+                          <div class="col-md-4 col-sm-12">
+                               <input type="submit" class="form-control" name="submit" value="Send Message">
+                          </div>
+
+                     </form>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                     <div class="google-map">
+<!-- How to change your own map point
+        1. Go to Google Maps
+        2. Click on your location point
+        3. Click "Share" and choose "Embed map" tab
+        4. Copy only URL and paste it within the src="" field below
+-->
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.887433887394!2d110.94980311420805!3d-7.587229794528774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a18899172a6d9%3A0xe9c84052b95a73cb!2sPT.%20Kusuma%20Kreasi%20Utama!5e0!3m2!1sid!2sid!4v1643073476027!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     </div>z
+                </div>
+
+           </div>
+      </div>
+ </section>
+@endsection
+
+
+     

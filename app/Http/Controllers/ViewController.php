@@ -35,4 +35,5 @@ class ViewController extends Controller
             'blog' => $blog
         ]);
     }
+   
 }

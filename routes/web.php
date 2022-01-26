@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\AllBlogController;
+use App\Http\Controllers\AllGalleryController;
+use App\Http\Controllers\AllPortfolioController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfilController;
-use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,5 +35,9 @@ Route::resource('home', HomeController::class)->middleware('auth:sanctum');
 Route::resource('profil', ProfilController::class)->middleware('auth:sanctum');
 Route::resource('portfolio', PortfolioController::class)->middleware('auth:sanctum');
 Route::resource('blog', BlogController::class)->middleware('auth:sanctum');
+Route::resource('allblog', AllBlogController::class);
+Route::resource('allportfolio', AllPortfolioController::class);
+Route::resource('allgallery', AllGalleryController::class);
 Route::get('/blog/{blog:slug}', [BlogController::class, 'show']);
+// Route::get('/allblog', [ViewController::class, 'allBlog']);
 Route::resource('gallery', GalleryController::class)->middleware('auth:sanctum');
