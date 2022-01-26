@@ -49,11 +49,10 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="index.html#home" class="smoothScroll">Home</a></li>
-                         <li><a href="index.html#about" class="smoothScroll">About</a></li>
-                         <li><a href="index.html#blog" class="smoothScroll">Blog</a></li>
-                         <li><a href="index.html#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="index.html#contact" class="smoothScroll">Contacts</a></li>
+                         <li><a href="/" class="smoothScroll">Home</a></li>
+                        <li><a href="/allblog" class="smoothScroll">Blog</a></li>
+                        <li><a href="/allportfolio" class="smoothScroll">Portfolio</a></li>
+                        <li><a href="/allgallery" class="smoothScroll">Gallery</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

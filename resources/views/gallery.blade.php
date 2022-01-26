@@ -43,7 +43,7 @@ http://www.templatemo.com/tm-509-hydro
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Hydro</a>
+                    <a href="/" class="navbar-brand">Hydro</a>
                </div>
 
                <!-- MENU LINKS -->
